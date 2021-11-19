@@ -1,0 +1,332 @@
+@import url('http://fonts.cdnfonts.com/css/gotham');
+/* font-family: 'Gotham', sans-serif;
+font-family: 'Gotham Black', sans-serif;
+font-family: 'Gotham Light', sans-serif;
+font-family: 'Gotham Thin', sans-serif;
+font-family: 'Gotham XLight', sans-serif;
+font-family: 'Gotham Book', sans-serif;
+font-family: 'Gotham Ultra', sans-serif; */
+
+body{
+    color: #9b9595;
+    background-color: #151727;
+}
+
+#wrapper {
+    height: calc(100vh - 90px);
+}
+
+/* .......... vertical navbar ............ */
+#navbar {
+    display: inline-block;
+    background-color: #02040e;
+    border: 1px solid #02040e;
+    border-radius: 1px;
+    color: #f0f0f0;
+    padding: 10px;
+    max-width: 250px;
+    height: 100%;
+}
+
+#navbar a{
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+.menu-nav{
+    vertical-align: unset;
+    height: 280px;
+} 
+
+.links-nav{
+    margin-top: 2px;
+    margin-left: 8px;
+    font-family: 'Gotham', sans-serif;
+    font-weight: 700;
+    color: #f0f0f0;
+    opacity: 0.8;
+}
+
+.links-nav:hover{
+    opacity: 1;
+    background-color: rgba(190, 185, 185, 0.26);
+    transition-duration: 0.2s;
+}
+
+#logo{
+    margin: 10px;
+    padding-bottom: 10px;
+}
+
+#navbar p{
+    display: inline-block;
+    color: #f0f0f0;
+    text-align: center;
+    margin-top: 1px;
+    margin-left: 7px;
+}
+
+.links-nav p{
+    font-size: 14px;
+}
+
+#yourLibrary{
+    margin-bottom: 20px;
+}
+
+hr{
+    background-color: #6c757d70;
+    width: 202px;
+}
+
+#scrollbar1{
+    overflow: auto;
+    height: 260px;
+}
+
+.links-small-nav{
+    font-weight: 400; 
+    opacity: 0.7;
+    margin-left: 7px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 90%;
+    margin-bottom: 11px;
+    text-align: left !important;
+}
+
+.links-small-nav a{
+    color: #f0f0f0; 
+    font-size: 14px;
+}
+
+.links-small-nav:hover{
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+  }
+  
+
+::-webkit-scrollbar-track {/* Track */
+    background: #000000; 
+}
+   
+
+::-webkit-scrollbar-thumb {/* Handle */
+    background: #888; 
+    border-radius: 0;
+}
+  
+
+::-webkit-scrollbar-thumb:hover { /* Handle on hover */
+    background: #555; 
+}
+
+#installApp-sticky{
+    position: absolute;
+    opacity: 0.7;
+    margin-left: 10px;
+    padding-top: 3px;
+}
+
+#installApp-sticky > .fas{
+    font-size: 18px;
+    opacity: 0.8;
+}
+
+
+/* .......... main:container and cards ............ */
+#content{
+    width: 100%!important;
+}
+
+.container{
+    max-width: 1240px;
+}
+
+
+
+/*........ navbar ........ */
+.navbar{
+    background-color: transparent;
+    width: 100%;
+    padding-left: 0;
+    justify-content: flex-start;
+}
+
+/* .blue{
+    position:fixed;
+    top:0;
+    background-color:blue;
+    width:100%;
+    height:50px;
+} */
+
+.navbar > a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 3px;
+    border-radius: 15px;
+    color: #ececec;
+    transition-duration: 0.2s;
+    background-color: #000000;
+    opacity: 0.8;
+}
+  
+.navbar a:hover {
+    background-color: #57596b;
+}
+
+.btn-user {
+    background: #000000;
+    color: #e0dbdb !important;
+    min-width: 100px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+}
+  
+.btn-user:hover {
+    background: rgb(18, 18, 16);
+    background: linear-gradient(
+      0deg,
+      #57596b 0%,
+      #1f223a 58%,
+      #2e3147 100%
+    );
+    color: #e0dbdb !important;
+}
+
+.dropdown-toggle::after{
+    margin-left: 4.255rem;
+}
+
+.dropdown-menu {
+    background: rgb(18, 18, 16);
+    background: linear-gradient(
+      0deg,
+      #57596b 0%,
+      #1f223a 58%,
+      #2e3147 100%
+    );
+}
+
+#username1{
+   display: flex;
+   justify-content: center;
+}
+
+.dropdown-menu a {
+    color: #e0dbdb;
+}
+
+.dropdown-menu a:hover {
+    background: rgb(18, 18, 16);
+    background: linear-gradient(
+        0deg,
+        rgba(70, 69, 69, 0.555) 0%,
+        rgb(80, 37, 41) 58%,
+        rgba(63, 20, 25, 0.514) 100%
+      );
+    color: #e0dbdb;
+}
+
+#lessThan > img{
+    margin-bottom: 3px;
+}
+
+#greaterThan > img{
+    margin-bottom: 3px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+
+/* ............ Footer (play) ............. */
+#footer {
+    display: flex;
+    flex-direction: row;
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: space-around;
+    background: #0b0c17;
+    align-items: center;
+}
+
+#footer-content{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.songInfo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform: 0.4s;
+}
+
+.songInfo i.far{
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+#span-footer{
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.slidecontainer input{
+    width: 100px;
+    height: 4px;
+}
+
+.icons1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#masterPlay{
+    color: #ececec;
+    font-size: 30px;
+}
+
+div.row.d-flex{
+    flex-direction: column;
+}
+
+#myProgressBar{
+    max-width: 500px;
+    min-width: 400px;
+    margin-top: 20px;
+    height: 6px;
+}
+
+input.slider{
+    height: 3px;
+    opacity: 0.8;
+}
+
+.box_title{
+    color: #ececec;
+}
+
+#audio{
+    opacity: 0.8;
+    align-items: center;
+}
+
