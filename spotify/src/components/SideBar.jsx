@@ -1,39 +1,46 @@
 import { Link } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Logo from '../assets/Spotify.png'
+import HomeIcon from '../assets/home.png'
+import SearchIcon from '../assets/search.png'
+import Library from '../assets/library.png'
+import PlayListIcon from '../assets/creat-playlist.png'
+import likedSong from '../assets/liked-song.png'
 
 const SideBar = () => (
 
-    <div id="navbar" className="w-25">
+    <div id="navbar">
         <div className="menu-nav">
             <div id="logo">
-                <img src='assets/Spotify.png' width="135px" height="40px" alt="Spotify logo" />
+                <img src={Logo} width="135px" height="40px" alt="Spotify logo" />
             </div>
             <div className="links-nav">
                 <Link to="/">
-                    <img src="assets/home.png" width="20px" height="20px" alt="..." />
+                    <img src={HomeIcon} width="20px" height="20px" alt="..." />
                     <p>Home</p>
                 </Link>
             </div>
             <div className="links-nav">
                 <Link to="/Search">
-                    <img src="assets/search.png" width="22px" height="24px" alt="..." />
+                    <img src={SearchIcon} width="22px" height="24px" alt="..." />
                     <p>Search</p>
                 </Link>
             </div>
             <div id="yourLibrary" className="links-nav">
                 <Link to="/album">
-                    <img src="assets/library.png" width="22px" height="22px" alt="..." />
+                    <img src={Library} width="22px" height="22px" alt="..." />
                     <p>Your Library</p>
                 </Link>
             </div>
             <div className="links-nav">
                 <Link to="/playlist">
-                    <img src="assets/creat-playlist.png" width="22px" height="22px" alt="..." />
+                    <img src={PlayListIcon} width="22px" height="22px" alt="..." />
                     <p>Create Playlist</p>
                     </Link>
             </div>
             <div className="links-nav mb-2">
                 <Link to="/artist">
-                    <img src="assets/liked-song.png" width="24px" height="24px" alt="..." />
+                    <img src={likedSong} width="24px" height="24px" alt="..." />
                     <p>Liked Songs</p>
                     </Link>
             </div>

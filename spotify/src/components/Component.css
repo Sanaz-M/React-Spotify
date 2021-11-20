@@ -16,6 +16,14 @@ body{
     height: calc(100vh - 90px);
 }
 
+#main-container{
+    margin: 0;
+    padding: 0;
+    color: #9b9595;
+    background-color: #151727;
+    width: 100%;
+}
+
 /* .......... vertical navbar ............ */
 #navbar {
     display: inline-block;

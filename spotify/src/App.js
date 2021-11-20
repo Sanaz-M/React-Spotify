@@ -6,23 +6,26 @@ import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 import Navbar from './components/Navbar'
 import { Container, Row, Col } from 'react-bootstrap'
 import HomePage from './components/HomePage';
-import songs from './components/HomePage'
+import Album from './components/Album';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 
 function App() {
   return (
     <BrowserRouter>
-      <Container>
+      <Container id="main-container">
         <Row>
-          <Col md={4}>
+          <Col md={3}>
             <SideBar />
           </Col>
-          <Col md={8}>
+          <Col md={9}>
             {/* <div id="content" class="h-100 overflow-auto"> */}
 
             {/* <Row className="mb-5"> */}
             <Navbar />
             <Routes>
-              <Route path="/" element={<HomePage songs={songs}/>} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/album/:songID" element={<Album />} />
               </Routes>
             {/* </Row> */}
 

@@ -4,15 +4,12 @@ import { useParams } from "react-router";
 import { Container, Row, Col, Form } from "react-bootstrap";
 
 
-const HomePage = ({ songs }) => {
+const HomePage = (props) => {
 
+    const [song, setSong] = useState([])
     const [query, setQuery] = useState('')
     const [selectedSong, setSelectedSong] = useState(null)
     const params = useParams();
-
-    const filterSongs = () => {
-        return songs.filter(song => song.title.toLowerCase().includes(query))
-    }
 
 
     useEffect(()=>{
@@ -33,7 +30,7 @@ const HomePage = ({ songs }) => {
     if (response.ok) {
         let data = await response.json();
         console.log(data)
-        setSelectedSong(data);
+        setSong(data.data);
       } else {
         console.log("error fetching details");
       };
@@ -48,7 +45,6 @@ const HomePage = ({ songs }) => {
             <Row>
                 <Col md={8}>
                     <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Search</Form.Label>
                         <Form.Control
                             type="text"
                             placeholder="Search"
@@ -62,11 +58,11 @@ const HomePage = ({ songs }) => {
                 <Col md={8}>
                     <Row>
                         {
-                            filterSongs().map(song => (
+                            song.length>0 && song.slice(0 , 12).map((song) => (
 
                                 <SingleSong
-                                    key={song._id}
-                                    song={song}
+                                    key={song.id}
+                                    song={props}
                                     selectedSong={selectedSong}
                                 />
                             ))

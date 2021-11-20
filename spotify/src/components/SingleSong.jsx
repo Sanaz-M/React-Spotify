@@ -1,12 +1,12 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
 
-const SingleSong = ({song, selectedSong}) => {
 
+const SingleSong = ({song}) => {
     return (
         <>
    
-        <Link to="../album-page/=${song.album.id}">
+        <Link to="/album/:songID">
        <div className="music-card mx-2 text-white"  id="cardHover">
         <div className="media d-flex">
           <img
