@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 const Navbar = () => (
-
+<Navbar>
         <NavbarBrand id="horizontal-nav" className="navbar navbar-expand-lg sticky-top ml-2" >
             <Link to="#"><img src={previous} width="15px" height="15px" id="lessThan" className="previous round mr-1"/></Link>
             <Link to="#"><img src={next} width="15px" height="15px" id="greaterThan" className="next round"/></Link>
@@ -40,6 +40,7 @@ const Navbar = () => (
                 </div>
             </div> */}
         </NavbarBrand>
+        </Navbar>
 
 )
 

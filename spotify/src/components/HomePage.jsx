@@ -2,11 +2,13 @@ import { useEffect, useState } from "react"
 import SingleSong from "./SingleSong"
 import { useParams } from "react-router";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import SingleAlbum from "./SingleAlbum";
 
 
-const HomePage = (props) => {
+const HomePage = () => {
 
     const [song, setSong] = useState([])
+    const [song1 , setSong1] = useState([])
     const [query, setQuery] = useState('')
     const [selectedSong, setSelectedSong] = useState(null)
     const params = useParams();
@@ -17,10 +19,10 @@ const HomePage = (props) => {
     },[])
 
 
-    const fetchSongs = async() => {
+    const fetchSongs = async(query) => {
 
     try{
-        let response = await fetch('https://striveschool-api.herokuapp.com/api/deezer/search?q=Qeen', {
+        let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`, {
             headers: {
                 "Content-type": 'application/json',
             }
@@ -60,10 +62,10 @@ const HomePage = (props) => {
                         {
                             song.length>0 && song.slice(0 , 12).map((song) => (
 
-                                <SingleSong
+                                <SingleAlbum
                                     key={song.id}
-                                    song={props}
                                     selectedSong={selectedSong}
+                                    src={song.album.cover}
                                 />
                             ))
                         }
