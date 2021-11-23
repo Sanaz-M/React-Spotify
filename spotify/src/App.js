@@ -24,7 +24,7 @@ function App() {
             {/* <Row className="mb-5"> */}
             <NavBar />
             <Routes>
-              <Route path="/" element={<HomePage query={query}/>} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/album/:id" element={<Album />} />
               </Routes>
             {/* </Row> */}

@@ -48,7 +48,7 @@ const HomePage = ({ query }) => {
                             type="text"
                             placeholder="Search"
                             value={query}
-                            onChange={e => setQuery(e.target.value)}
+                            // onChange={e => setQuery(e.target.value)}
                         />
                     </Form.Group>
                 </Col>
