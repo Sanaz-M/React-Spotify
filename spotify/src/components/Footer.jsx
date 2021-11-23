@@ -8,7 +8,7 @@ const Footer =() => (
             <img src="logo.ico" className="box_image mr-2" alt="..." width="50px" height="50px"/>
             <a href="#"><span className="box_title">..Song name<br/><span>Artist name</span> </span></a>
             <i className="far fa-heart ml-4 mr-2"></i>
-            \<img src="assets/monitor.png" width="16px" height="18px"/>
+            <img src="assets/monitor.png" width="16px" height="18px"/>
           </Col> 
           <Col md={8} lg={6} id="play-buttons d-flex">
             <Row className="d-flex">

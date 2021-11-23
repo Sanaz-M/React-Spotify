@@ -1,11 +1,11 @@
-import { NavbarBrand, NavDropdown } from "react-bootstrap"
+import { NavbarBrand, NavDropdown,Navbar } from "react-bootstrap"
 import {Link} from 'react-router-dom'
 import previous from '../assets/previous.png'
 import next from '../assets/next.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 
-const Navbar = () => (
+const NavBar = () => (
 <Navbar>
         <NavbarBrand id="horizontal-nav" className="navbar navbar-expand-lg sticky-top ml-2" >
             <Link to="#"><img src={previous} width="15px" height="15px" id="lessThan" className="previous round mr-1"/></Link>
@@ -44,4 +44,4 @@ const Navbar = () => (
 
 )
 
-export default Navbar
+export default NavBar

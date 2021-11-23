@@ -1,44 +1,41 @@
 import { useEffect, useState } from "react"
-import SingleSong from "./SingleSong"
-import { useParams } from "react-router";
 import { Container, Row, Col, Form } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import SingleAlbum from "./SingleAlbum";
 
 
-const HomePage = () => {
+const HomePage = ({ query }) => {
 
     const [song, setSong] = useState([])
-    const [song1 , setSong1] = useState([])
-    const [query, setQuery] = useState('')
-    const [selectedSong, setSelectedSong] = useState(null)
-    const params = useParams();
+    const [song1, setSong1] = useState([])
 
 
-    useEffect(()=>{
+
+    useEffect(() => {
         fetchSongs();
-    },[])
+    }, [])
 
 
-    const fetchSongs = async(query) => {
+    const fetchSongs = async (query) => {
 
-    try{
-        let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`, {
-            headers: {
-                "Content-type": 'application/json',
-            }
-        });
-          console.log(response)
-    
-    if (response.ok) {
-        let data = await response.json();
-        console.log(data)
-        setSong(data.data);
-      } else {
-        console.log("error fetching details");
-      };
-    } catch (error) {
-      console.log(error);
-    }
+        try {
+            let response = await fetch(`https://striveschool-api.herokuapp.com/api/deezer/search?q=${query}`, {
+                headers: {
+                    "Content-type": 'application/json',
+                }
+            });
+            console.log(response)
+
+            if (response.ok) {
+                let data = await response.json();
+                console.log(data)
+                setSong(data.data);
+            } else {
+                console.log("error fetching details");
+            };
+        } catch (error) {
+            console.log(error);
+        }
     }
 
 
@@ -60,13 +57,13 @@ const HomePage = () => {
                 <Col md={8}>
                     <Row>
                         {
-                            song.length>0 && song.slice(0 , 12).map((song) => (
-
-                                <SingleAlbum
-                                    key={song.id}
-                                    selectedSong={selectedSong}
-                                    src={song.album.cover}
-                                />
+                            song.length > 0 && song.slice(0, 12).map((song) => (
+                                <Link to={"album/" + song.album.id}>
+                                    <SingleAlbum
+                                        key={song.id}
+                                        src={song.src}
+                                    />
+                                </Link>
                             ))
                         }
                     </Row>

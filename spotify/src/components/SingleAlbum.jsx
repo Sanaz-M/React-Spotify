@@ -1,6 +1,6 @@
 const SingleAlbum = (props) => {
     return (
-        <div className="music-card mx-2 text-white"  id="cardHover" key={props.key}>
+        <div className="music-card mx-2 text-white">
         <div className="media d-flex">
           <img
             src={props.src}

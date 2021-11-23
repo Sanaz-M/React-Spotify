@@ -3,7 +3,7 @@ import Footer from './components/Footer';
 import './components/Component.css'
 import SideBar from './components/SideBar';
 import { BrowserRouter, Routes ,Route } from 'react-router-dom';
-import Navbar from './components/Navbar'
+import NavBar from './components/Navbar'
 import { Container, Row, Col } from 'react-bootstrap'
 import HomePage from './components/HomePage';
 import Album from './components/Album';
@@ -22,10 +22,10 @@ function App() {
             {/* <div id="content" class="h-100 overflow-auto"> */}
 
             {/* <Row className="mb-5"> */}
-            <Navbar />
+            <NavBar />
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/album/:songID" element={<Album />} />
+              <Route path="/" element={<HomePage query={query}/>} />
+              <Route path="/album/:id" element={<Album />} />
               </Routes>
             {/* </Row> */}
 
